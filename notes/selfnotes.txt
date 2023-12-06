@@ -1,0 +1,32 @@
+module system 
+node provides alot  of modules
+async vs sync node
+takes two arguments name of file and data want to write
+
+require function is how we load in things such as module
+
+require function returns all stuff from module
+!! you need to store it in a variable !!
+
+so const fs = require('fs')
+
+fs.writeFileSync('notes.txt', 'My name is brooke.')
+
+!! writefile and writefilesync methods write data to a file !!
+!! if file doesnt exist it will be created !!
+!! if  file exists text content will be overwritten !!
+
+variable needs to be same before .writeFileSync
+
+challenge : append a message to notes.txt importing core modules 13:00
+
+when pass file to node only that file executes
+!!!!!!!!!!
+!! all files have its own scope
+!! how to access those files
+!!!!!!! intentionally export all stuff  the file needs to share with outside world
+!! modules system module.exports
+10:17 10
+
+
+

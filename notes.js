@@ -82,7 +82,7 @@ const loadNotes = () => {
     }
 }
 
-module.exports = {
+module.exports = { // this exports multiple files at once because it's an object
     addNote: addNote,
     removeNote: removeNote,
     listNotes: listNotes,
