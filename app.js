@@ -5,7 +5,7 @@
  //call to writefilesync
 
                     // file type        //file content
-fs.writeFileSync('notes.txt', 'this file was created by Node.js')
+// fs.writeFileSync('notes.txt', 'this file was created by Node.js')
 
 // !!!!!!!!! require function is loading in modules (prewritten javascript code)
 // need to store all that data in a variable

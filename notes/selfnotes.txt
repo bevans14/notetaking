@@ -1,3 +1,8 @@
+// node does alot of things
+// importing and exporting packages of prewritten code to achieve something
+
+
+
 module system 
 node provides alot  of modules
 async vs sync node
@@ -26,7 +31,67 @@ when pass file to node only that file executes
 !! how to access those files
 !!!!!!! intentionally export all stuff  the file needs to share with outside world
 !! modules system module.exports
-10:17 10
+!!!!!!!
+
+const add = require('./utils.js)
+const sum = add(4,-2)
+console.log(sum)
+I imported a function using require and thats how i got my sum
+
+!!!! to export a function !!!!!
+
+const getNotes = function (){
+    return 'get notes'
+}
+
+module.exports = getNotes
+
+!!!!!!!!!!!!!!!
+
+then you must load in the file to another js
+const GetNotes = require('./notes.js) << just the name of the file im importing from
+
+            --- Loading in NPM modules ---   
+
+npm init
+json = js object notation
+dont modify npm packages
+
+npm packages are prewritten code anyone can use
+
+-- process is a big object with many methods and properties
+process.argv 
+argv argument vector, its an array with all arguments provided
+provess.argv[2] grabs specifc index of array for efficiency 
+
+const command =  process.argv[2]
+
+if (command === 'add') { 
+    console.log('adding note')
+}
+
+if trying to remove a note, need to specify which one to remove (in this case we specify by title)
+
+need  to parse all the arguments manually, which is not convienent (write test maintain)
+so  find a npm package that does that for us
+
+node doesnt parse things in a way thats useful
+
+---- yargs ----
+
+yargs npm package parses our arguments in a way our objects are easy to access
+
+configure yargs to work with commands we need to work with
 
 
+// node doesnt parse (parsing breaks down code into manageable parts so computer can understand it) things in a way thats useful,
+so by using a npm package called yargs, it parses our program for us so we dont have to write the parsing code ourself
+// efficiency
+
+
+// JSON.stringify is a JS method that takes a value and return json string representation
+
+// JSON.parse takes in string and returns json object
+
+// storing json data but its not a text file, but since our arguement used JSON.stringify
 
